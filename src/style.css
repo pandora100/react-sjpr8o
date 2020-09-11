@@ -1,8 +1,8 @@
 .escondido{
-  display : 'block';
+  display : block;
   color: red;
 }
 .aparecido{
-  display : 'none';
+  display : none;
   color: blue;
 }

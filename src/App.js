@@ -12,9 +12,14 @@ export default function App() {
         if (hidden && moreRef.current) {
             console.log("hidden false");
             moreRef.current.className = "escondido";
+            buttonTextRef.current.innerText = 'Show less';
+            buttonTextRef.current.nextElementSibling.setAttribute("data-icon", "caret-up");
         } else if(!hidden && moreRef.current) {
             console.log("hidden true");
             moreRef.current.className = "aparecido";
+            buttonTextRef.current.innerText = 'Show More';
+            buttonTextRef.current.nextElementSibling.setAttribute("data-icon", "caret-down");
+
         }
     }, [hidden]);
   const onclick = () => { 
