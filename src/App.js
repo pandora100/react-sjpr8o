@@ -9,10 +9,10 @@ export default function App() {
 
   useEffect(() => {
         // *** After render, don't do anything, just remember we've seen the render
-        if (hidden) {
+        if (hidden && moreRef.current) {
             console.log("hidden false");
             moreRef.current.className = "escondido";
-        } else {
+        } else if(!hidden && moreRef.current) {
             console.log("hidden true");
             moreRef.current.className = "aparecido";
         }
@@ -30,7 +30,7 @@ export default function App() {
     <i  className="fas fa-caret-down"></i>
   </button>
 
-  <p ref={moreRef} style={{display: 'none'}}>
+  <p ref={moreRef}>
       MORE
   </p>
   </React.Fragment>
