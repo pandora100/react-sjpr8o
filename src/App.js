@@ -17,7 +17,7 @@ export default function App() {
             moreRef.current.className = "aparecido";
         }
     }, [hidden]);
-  onclick = () => { 
+  const onclick = () => { 
   setHidden(!hidden);
 };
 
