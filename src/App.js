@@ -11,12 +11,12 @@ export default function App() {
         // *** After render, don't do anything, just remember we've seen the render
         if (hidden && moreRef.current) {
             console.log("hidden false");
-            moreRef.current.className = 'aparecido';
+            moreRef.current.className = 'escondido';
             buttonTextRef.current.innerText = 'Show less';
             buttonTextRef.current.nextElementSibling.setAttribute("data-icon", "caret-up");
         } else if(!hidden && moreRef.current) {
             console.log("hidden true");
-            moreRef.current.className = 'escondido';
+            moreRef.current.className = 'aparecido';
             buttonTextRef.current.innerText = 'Show More';
             buttonTextRef.current.nextElementSibling.setAttribute("data-icon", "caret-down");
 
